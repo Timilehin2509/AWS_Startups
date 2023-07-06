@@ -1,0 +1,112 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/*Page formatting above*/
+
+.event_banner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+.event_banner img{
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  transform-origin: top right;
+}
+
+.register_button {
+  position: absolute;
+  bottom: 20%;
+  right: 7%; 
+  width: 10.4vw;
+  height: 3.9vw;
+  z-index: 1;
+  background-color: hsl(96, 44%, 50%);
+  border: none;
+  border-radius: 0.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.0vw;
+  font-weight: 700;
+  font-family: 'Hanken Grotesk', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  transition: background-color 0.3s ease;
+}
+
+.register_button:hover{
+  background-color: hsl(96, 72%, 52%);
+}
+
+.event_details{
+  background-color: hsl(0, 0%, 4%);
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 5%;
+  align-items: flex-start;
+  text-align: left;
+  font-weight: 400;
+  font-family: 'Hanken Grotesk', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.1vw;
+  line-height: 3.2vw;
+}
+
+.headings{
+  font-size: 1.02vw;
+  font-family: 'Roboto', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: hsl(96, 44%, 50%);
+  line-height: 1.34vw;
+}
+
+#date{
+  margin-left: 5%;
+}
+
+@media (max-width: 600px) {
+
+  .register_button{
+    font-size: 1.2vw;
+  }
+  .event_details{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 3vw;
+  }
+  .headings{
+      font-size: 1.5vw;
+  }
+  #date{
+    margin-left: 0;
+  }
+}
